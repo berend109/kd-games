@@ -27,10 +27,3 @@ de link onder de antwoord/input field doen of een alert
     wanneer gebruiker een fout maakt.
 	
 * == als je er tijd voor hebt
-
-
-TODO
-
-[] basic layout maken (header, content, footer)
-[] Uitleg binair rekenen vinden engels en nederlands (liefst uitleg zonder tekst)
-[] 
