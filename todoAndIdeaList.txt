@@ -1,0 +1,26 @@
+255 max decimal
+
+veschillende array 20 met verschillende vragen er in zodat speler ongeveer gelijke niveu heeft zonder herhalling van vragen
+
+en uitleg uibreiden als fout
+
+leaderboard maken 
+
+toggle om leaderboard te zien zonder de spel te hoefen beginnen
+
+10 minuten geheel of per vraag 20 sec. als optie.
+
+engels of nederlands optie (toggle)
+
+aantal goede antwoorden laten zien. en niet aantal fouten antwoorden. 
+en live laten zien hoeveel je al beantwoord niet.
+
+leaderboard met tijd/datum/score/gebruiker
+
+tijd : goede antwoord positie leaderboard en gene met eerste post komt boven andere persoon met gelijke score.
+
+* keuze uit binaire of decimale antwoorden/vrage
+
+de link onder de antwoord field doen zodat de uitleg of een alert. 
+	
+* == als je er tijd voor hebt
