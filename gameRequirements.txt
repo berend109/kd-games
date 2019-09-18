@@ -7,6 +7,6 @@
 -   while a player is busy he must be able to see how many answers he has yet to give.
 -   The player must be able to enter a nickname, no personal data is required.
 -   There must be a leaderboard so that the players can compare the score with each other.
--   The leaderboard placement is determined by time divided by time.
+-   If 2 player have the same score the payer with less time played needs to come on top.
 -   The leaderboard must be able to show time, date, score and user.
 -   The game should not last longer than 10 minutes or 30 seconds per question.

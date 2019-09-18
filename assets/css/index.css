@@ -4,3 +4,17 @@ input[type=number] {
     appearance: textfield;
     margin: 0; 
 }
+
+#card {
+    display: inline-block;
+    width: 50%;
+    margin: 0% 25%;
+}
+
+#inputForm {
+    width: 2em;
+}
+
+input {
+    text-align: center;
+}
