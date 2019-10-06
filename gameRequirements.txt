@@ -1,0 +1,12 @@
+-   The questions may not be longer than 255 decimal.
+-   The questions must be from 20 different levels.
+-   There must be a basic explanation while playing.
+-   If the user gives a wrong answer, a more detailed explanation must be provided.
+-   The extra explanation in case of a wrong answer must come under the input field.
+-   There must be a switch for the Dutch language and the English language in the user interface.
+-   while a player is busy he must be able to see how many answers he has yet to give.
+-   The player must be able to enter a nickname, no personal data is required.
+-   There must be a leaderboard so that the players can compare the score with each other.
+-   If 2 player have the same score the payer with less time played needs to come on top.
+-   The leaderboard must be able to show time, date, score and user.
+-   The game should not last longer than 10 minutes or 30 seconds per question.

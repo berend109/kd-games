@@ -1,0 +1,16 @@
+/* change the input bar so there is no styling. */
+input[type=number] { 
+    -moz-appearance: textfield;
+    appearance: textfield;
+    margin: 0; 
+}
+
+#card {
+    display: inline-block;
+    width: 50%;
+    margin: 0% 25%;
+}
+
+input {
+    text-align: center;
+}
