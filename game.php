@@ -8,6 +8,8 @@
         $status = "Binair";
     }
 
+    $playerName = $_GET["nickname"];
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -66,6 +68,7 @@
 
         var imported = document.createElement('script');
         var gameMode = "<?= $status; ?>";
+        var playerName = "<?= $playerName; ?>";
 
         if (gameMode == "Binair") {
             imported.src = 'assets/JS/binair.js';
