@@ -40,22 +40,23 @@
     <div class="card text-center" id="card">
         <div class="card-header">
             <form action="assets/php/playerInfo.php" method="GET">
-                <div id="inputForm langSelect">
+                <!--<div id="inputForm langSelect">
                     <p>Select Language</p>
-                    <!-- Language switch -->
+                     Language switch 
                     <input type="checkbox" data-toggle="toggle" data-on="English" data-off="Nederlands"
                         data-onstyle="success" data-offstyle="success">
-                </div>
+                </div>-->
                 <div id="inputForm gameSelect">
                     <p>Select game mode</p>
                     <!-- game mode switch -->
-                    <input type="checkbox" data-toggle="toggle" data-on="Decimal" data-off="Binair"
+                    <input type="checkbox" name="toggleInput" data-toggle="toggle" data-on="Decimal" data-off="Binair"
                         data-onstyle="success" data-offstyle="success">
                 </div>
                 <div id="inputForm nickName">
                     <!-- user input -->
                     <input placeholder="nickname" name="nickname" type="text" class="form-control">
                     <input type="submit" value="submit" class="btn btn-primary">
+
                 </div>
             </form>
         </div>
