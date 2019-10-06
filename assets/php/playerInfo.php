@@ -4,19 +4,18 @@
 
     echo $_GET["nickname"];
 
+    if(!empty($_GET['toggleInput'])) {
 
-if(!empty($_GET['toggleInput'])) {
+        echo "<br>";
+        echo "<br>";
+        echo "Decimal";
 
-    echo "<br>";
-    echo "<br>";
-    echo "Decimal";
+    } else {
 
-} else {
+        echo "<br>";
+        echo "<br>";
+        echo "Binair";
 
-    echo "<br>";
-    echo "<br>";
-    echo "Binair";
-
-}
+    }
 
 ?>

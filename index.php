@@ -39,7 +39,7 @@
 
     <div class="card text-center" id="card">
         <div class="card-header">
-            <form action="assets/php/playerInfo.php" method="GET">
+            <form action="game.php" method="GET">
                 <!--<div id="inputForm langSelect">
                     <p>Select Language</p>
                      Language switch 

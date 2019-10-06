@@ -1,3 +1,14 @@
+<?php
+
+    session_start();
+
+    if(!empty($_GET['toggleInput'])) {
+        $status = "Decimal";
+    } else {
+        $status = "Binair";
+    }
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,5 +62,19 @@
 
     </div>
 
+    <script type="text/javascript">
+
+        var imported = document.createElement('script');
+        var gameMode = "<?= $status; ?>";
+
+        if (gameMode == "Binair") {
+            imported.src = 'assets/JS/binair.js';
+        } else {
+            imported.src = 'assets/JS/decimal.js';
+        }
+
+        document.head.appendChild(imported);
+        
+    </script>
 </body>
 </html>
