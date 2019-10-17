@@ -49,7 +49,7 @@
 
         <div class="card-header">
             <!-- Language switch -->
-            <input type="checkbox" data-toggle="toggle" data-on="Nederlands" data-off="English" 
+            <input type="checkbox" data-toggle="toggle" data-on="English" data-off="Nederlands" 
                 data-onstyle="success" data-offstyle="success">
 
         </div>
