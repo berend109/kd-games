@@ -37,7 +37,8 @@
     <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.5.0/js/bootstrap4-toggle.min.js"></script>
 
     <!-- css link -->
-    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/index.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/game.css">
 
     <!-- title -->
     <title>Project Binair Rekenen</title>
@@ -47,9 +48,15 @@
 
     <div class="card text-center" id="card">
 
-        <div class="card-header">
+        <div class="card-header text-right">
+
+            <!-- show nickname -->
+            <p id="nickname">
+                <?php echo $playerName; ?>
+            </p>
+
             <!-- Language switch -->
-            <input type="checkbox" data-toggle="toggle" data-on="Nederlands" data-off="English" 
+            <input type="checkbox" data-style="lang-switch" data-toggle="toggle" data-on="English" data-off="Nederlands" 
                 data-onstyle="success" data-offstyle="success">
 
         </div>
@@ -58,7 +65,7 @@
         </div>
         <div class="card-body input-group" id="input">
             <!-- user input -->
-            <input type="number" class="form-control">
+            <input id="input-field" type="number" class="form-control">
             <a href="#" class="btn btn-primary">Button</a>
         </div>
 
