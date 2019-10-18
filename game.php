@@ -56,11 +56,7 @@
             </p>
 
             <!-- Language switch -->
-<<<<<<< HEAD
-            <input type="checkbox" data-style="lang-switch" data-toggle="toggle" data-on="English" data-off="Nederlands" 
-=======
             <input type="checkbox" data-toggle="toggle" data-on="English" data-off="Nederlands" 
->>>>>>> c65fc5beb39dc9546151f28bc5e071d04118b752
                 data-onstyle="success" data-offstyle="success">
 
         </div>
