@@ -8,30 +8,44 @@ function getRandomInt(min, max) {
 
 // create questions.
 let questionArr = [];
+// a used to get temperarly number stored before pushed in array in questions function.
+let a;
 
 function questions() {
     for (i = 0; i < 2; i++) {
-        questionArr.push(getRandomInt(5, 20));
+        a = getRandomInt(5, 20);
+        a = a.toString(2);
+        questionArr.push(a);
     }
 
     for (i = 0; i < 4; i++) {
-        questionArr.push(getRandomInt(21, 50));
+        a = getRandomInt(21, 50);
+        a = a.toString(2);
+        questionArr.push(a);
     }
 
     for (i = 0; i < 4; i++) {
-        questionArr.push(getRandomInt(51, 100));
+        a = getRandomInt(51, 100);
+        a = a.toString(2);
+        questionArr.push(a);
     }
 
     for (i = 0; i < 4; i++) {
-        questionArr.push(getRandomInt(101, 150));
+        a = getRandomInt(101, 150);
+        a = a.toString(2);
+        questionArr.push(a);
     }
 
     for (i = 0; i < 3; i++) {
-        questionArr.push(getRandomInt(151, 200));
+        a = getRandomInt(151, 200);
+        a = a.toString(2);
+        questionArr.push(a);
     }
 
     for (i = 0; i < 3; i++) {
-        questionArr.push(getRandomInt(201, 256));
+        a = getRandomInt(201, 256);
+        a = a.toString(2);
+        questionArr.push(a);
     }
 
     return questionArr;
