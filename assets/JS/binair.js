@@ -6,14 +6,47 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
-var question = getRandomInt(10, 20);
+// create questions.
+let questionArr = [];
 
-alert (question);
+function questions() {
+    for (i = 0; i < 2; i++) {
+        questionArr.push(getRandomInt(5, 20));
+    }
 
-var num = prompt("Enter num");
+    for (i = 0; i < 4; i++) {
+        questionArr.push(getRandomInt(21, 50));
+    }
 
-if (question == num) {
-    alert("yes");
-} else {
-    alert("no");
+    for (i = 0; i < 4; i++) {
+        questionArr.push(getRandomInt(51, 100));
+    }
+
+    for (i = 0; i < 4; i++) {
+        questionArr.push(getRandomInt(101, 150));
+    }
+
+    for (i = 0; i < 3; i++) {
+        questionArr.push(getRandomInt(151, 200));
+    }
+
+    for (i = 0; i < 3; i++) {
+        questionArr.push(getRandomInt(201, 256));
+    }
+
+    return questionArr;
 }
+
+console.log(questions());
+
+// var question = getRandomInt(10, 20);
+//
+// alert (question);
+//
+// var num = prompt("Enter num");
+//
+// if (question == num) {
+//     alert("yes");
+// } else {
+//     alert("no");
+// }
