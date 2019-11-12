@@ -61,7 +61,10 @@
 
         </div>
         <div class="card-body" id="question">
-
+            <div id="binary-image">
+                <p id="explaining paragraph"></p>
+                <img src="assets/image/binary-code-binary-system-explained.png" class="img-fluid" alt="explaining of binary counting">
+            </div>
         </div>
         <div class="card-body input-group" id="input">
             <!-- user input -->

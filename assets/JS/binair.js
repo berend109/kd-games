@@ -8,7 +8,6 @@ function getRandomInt(min, max) {
 
 // create questions.
 let questionArr = [];
-// a used to get temperarly number stored before pushed in array in questions function.
 let a;
 
 function questions() {
