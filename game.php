@@ -8,6 +8,12 @@
         $status = "Binair";
     }
 
+    if(!empty($_GET['toggleLanguage'])) {
+        $language = "English";
+    } else {
+        $language = "Nederlands";
+    }
+
     $playerName = $_GET["nickname"];
 
 ?>
@@ -76,17 +82,26 @@
 
     <script type="text/javascript">
 
-        var imported = document.createElement('script');
+        var importedGameMode = document.createElement('script');
+        var importedLanguageMode = document.createElement('script');
         var gameMode = "<?= $status; ?>";
+        var languageMode = "<?= $language; ?>";
         var playerName = "<?= $playerName; ?>";
 
-        if (gameMode == "Binair") {
-            imported.src = 'assets/JS/binair.js';
+        if (gameMode === "Binair") {
+            importedGameMode.src = 'assets/JS/binair.js';
         } else {
-            imported.src = 'assets/JS/decimal.js';
+            importedGameMode.src = 'assets/JS/decimal.js';
         }
 
-        document.head.appendChild(imported);
+        if (languageMode === "Nederlands") {
+            importedLanguageMode.src = 'assets/JS/Nederlands.js';
+        } else {
+            importedLanguageMode.src = 'assets/JS/English.js';
+        }
+
+        document.head.appendChild(importedGameMode);
+        document.head.appendChild(importedLanguageMode);
 
     </script>
 </body>
