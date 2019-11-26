@@ -54,25 +54,25 @@
 
     <div class="card text-center" id="card">
 
-        <div class="card-header text-right">
-
+        <div class="card-header text-right" id="header-card">
             <!-- show nickname -->
             <p id="nickname">
                 <?php echo $playerName; ?>
             </p>
-
             <!-- Language switch -->
             <input type="checkbox" data-toggle="toggle" data-on="English" data-off="Nederlands"
                 data-onstyle="success" data-offstyle="success">
-
         </div>
-        <div class="card-body" id="question">
+        <div class="card-body" id="question-card">
             <div id="binary-image">
                 <p id="explaining paragraph"></p>
                 <img src="assets/image/binary-code-binary-system-explained.png" class="img-fluid" alt="explaining of binary counting">
             </div>
+            <div id="question-section">
+                <p id="question-p"></p>
+            </div>
         </div>
-        <div class="card-body input-group" id="input">
+        <div class="card-body input-group" id="input-card">
             <!-- user input -->
             <input id="input-field" type="number" class="form-control">
             <a href="#" class="btn btn-primary">Button</a>

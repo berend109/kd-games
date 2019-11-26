@@ -1,5 +1,6 @@
 // alert ("Binair");
 
+// function for getting random numbers that will be used to create random questions.
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -10,6 +11,8 @@ function getRandomInt(min, max) {
 let questionArr = [];
 let a;
 
+// getting 20 questions
+// change the number in the for loop behind "<" to get more or less questions.
 function questions() {
     for (i = 0; i < 2; i++) {
         a = getRandomInt(5, 20);
@@ -50,16 +53,7 @@ function questions() {
     return questionArr;
 }
 
-console.log(questions());
+// put the questions on the screen.
+document.getElementById("question-p").innerHTML = questions();
 
-// var question = getRandomInt(10, 20);
-//
-// alert (question);
-//
-// var num = prompt("Enter num");
-//
-// if (question == num) {
-//     alert("yes");
-// } else {
-//     alert("no");
-// }
+console.log(questions());
