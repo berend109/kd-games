@@ -8,11 +8,11 @@ function getRandomInt(min, max) {
 }
 
 // create questions.
+
+// change the number in the for loop behind "<" to get more or less questions.
 let questionArr = [];
 let a;
 
-// getting 20 questions
-// change the number in the for loop behind "<" to get more or less questions.
 function questions() {
     for (i = 0; i < 2; i++) {
         a = getRandomInt(5, 20);
@@ -53,7 +53,19 @@ function questions() {
     return questionArr;
 }
 
-// put the questions on the screen.
-document.getElementById("question-p").innerHTML = questions();
+// start the game.
 
-console.log(questions());
+// make the start button work.
+const startButton = document.getElementById('start-btn');
+startButton.addEventListener('click', startGame);
+
+function startGame(){
+    console.log("started");
+    startButton.classList.add('hide');
+    shuffledQuestions = questionArr.sort(() =>  Math.random() - .5);
+    currentQuestionIndex = 0;
+}
+
+// put the questions on the screen.
+// document.getElementById("question-p").innerHTML = questions();
+// console.log(questions());
