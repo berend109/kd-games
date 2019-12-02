@@ -1,8 +1,7 @@
 /* change the input bar so there is no styling. */
-input[type=number] { 
+input[type=number] {
     -moz-appearance: textfield;
-    appearance: textfield;
-    margin: 0; 
+    margin: 0;
 }
 
 #card {
