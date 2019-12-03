@@ -1,18 +1,18 @@
 // alert ("Binair");
 
-// function for getting random numbers that will be used to create random questions.
+// create random numbers that will be used in the questions() function.
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
-// create questions.
-
-// change the number in the for loop behind "<" to get more or less questions.
+// create variables to be used in the questions() function.
 let questionArr = [];
 let a;
 
+// this function creates the questions and put it an array.
+// change the number in the for loop behind "<" to get more or less questions.
 function questions() {
     for (i = 0; i < 2; i++) {
         a = getRandomInt(5, 20);
@@ -54,18 +54,32 @@ function questions() {
 }
 
 // start the game.
-
 // make the start button work.
 const startButton = document.getElementById('start-btn');
 startButton.addEventListener('click', startGame);
 
 function startGame(){
     console.log("started");
-    startButton.classList.add('hide');
-    shuffledQuestions = questionArr.sort(() =>  Math.random() - .5);
-    currentQuestionIndex = 0;
+    displayRandomQuestion();
 }
 
-// put the questions on the screen.
-// document.getElementById("question-p").innerHTML = questions();
-// console.log(questions());
+function displayRandomQuestion() {
+    var randomQuestion = questions()[Math.floor(Math.random() * questionArr.length)];
+    document.getElementById("question-p").innerHTML = randomQuestion;
+}
+
+// TODO: This is a counter that can be used to display new question after sertain amount of time.
+// TODO: make this usable with displayRandomQuestion() function.
+// var count = 15;
+// var timer = setInterval(function() {
+//   console.log(count);
+//   count--;
+//   if(count === 0) {
+//     stopInterval()
+//   }
+// }, 1000);
+
+// var stopInterval = function() {
+//   console.log('time is up!');
+//   clearInterval(timer);
+// }

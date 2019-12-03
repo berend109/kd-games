@@ -104,8 +104,8 @@
             importedLanguageMode.src = 'assets/JS/English.js';
         }
 
-        document.head.appendChild(importedGameMode);
-        document.head.appendChild(importedLanguageMode);
+        document.body.appendChild(importedGameMode);
+        document.body.appendChild(importedLanguageMode);
 
     </script>
 </body>
