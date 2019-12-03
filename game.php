@@ -1,3 +1,6 @@
+<!-- Notes -->
+<!-- To hide html with bootstrap use class="d-none". -->
+
 <?php
 
     session_start();
@@ -73,13 +76,14 @@
         </div>
         <div class="card-body question-container">
             <div id="question">
+                <!-- TODO: create a question string depending on chosen language. -->
                 <p id="question-p"></p>
             </div>
         </div>
         <div class="card-body input-group" id="input-card">
             <!-- user input -->
             <input id="input-field" type="number" class="form-control">
-            <a href="#" class="btn btn-primary">Next</a>
+            <a id="buttonNext" class="btn btn-primary">Next</a>
         </div>
 
     </div>
