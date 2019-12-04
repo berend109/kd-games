@@ -3,6 +3,7 @@
 // TODO: make a function that compares input to the given question.
 // TODO: make a function that stores the question so it will not be displayed again.
 // TODO: make a function that stores the amount of answers that are right or wrong.
+// TODO: make a function that prints question first and then refresh quesiton after 10 seconds.
 
 // create random numbers that will be used in the questions() function.
 function getRandomInt(min, max) {
@@ -64,26 +65,27 @@ startButton.addEventListener('click', startGame);
 
 function startGame(){
     console.log("started");
-    displayRandomQuestion();
+    questionRefresh();
+}
+
+function questionRefresh() {
+    let count = 10;
+    let timer = setInterval(function() {
+        console.log(count);
+        count--;
+        if(count === 0) {
+            displayRandomQuestion();
+            stopInterval();
+        }
+    }, 1000);
+
+    let stopInterval = function() {
+        clearInterval(timer);
+        startGame();
+    }
 }
 
 function displayRandomQuestion() {
     var randomQuestion = questions()[Math.floor(Math.random() * questionArr.length)];
     document.getElementById("question-p").innerHTML = randomQuestion;
 }
-
-// TODO: This is a counter that can be used to display new question after sertain amount of time.
-// TODO: make this usable with displayRandomQuestion() function.
-// var count = 15;
-// var timer = setInterval(function() {
-//   console.log(count);
-//   count--;
-//   if(count === 0) {
-//     stopInterval()
-//   }
-// }, 1000);
-
-// var stopInterval = function() {
-//   console.log('time is up!');
-//   clearInterval(timer);
-// }
