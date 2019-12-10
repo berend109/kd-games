@@ -3,7 +3,6 @@
 // TODO: make a function that compares input to the given question.
 // TODO: make a function that stores the question so it will not be displayed again.
 // TODO: make a function that stores the amount of answers that are right or wrong.
-// TODO: make a function that prints question first and then refresh quesiton after 10 seconds.
 
 // create random numbers that will be used in the questions() function.
 function getRandomInt(min, max) {
@@ -69,12 +68,12 @@ function startGame(){
 }
 
 function questionRefresh() {
+    displayRandomQuestion();
     let count = 10;
     let timer = setInterval(function() {
         console.log(count);
         count--;
         if(count === 0) {
-            displayRandomQuestion();
             stopInterval();
         }
     }, 1000);
