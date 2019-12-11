@@ -85,6 +85,5 @@ function questionRefresh() {
 }
 
 function displayRandomQuestion() {
-    var randomQuestion = questions()[Math.floor(Math.random() * questionArr.length)];
-    document.getElementById("question-p").innerHTML = randomQuestion;
+    document.getElementById("question-p").innerHTML = questions()[Math.floor(Math.random() * questionArr.length)];
 }
