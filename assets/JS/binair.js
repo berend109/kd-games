@@ -3,6 +3,7 @@
 // TODO: make a function that compares input to the given question.
 // TODO: make a function that stores the question so it will not be displayed again.
 // TODO: make a function that stores the amount of answers that are right or wrong.
+// TODO: make a function that that display the amount of question answered and still to come.
 
 // create random numbers that will be used in the questions() function.
 function getRandomInt(min, max) {
