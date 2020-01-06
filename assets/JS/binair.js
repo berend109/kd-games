@@ -84,3 +84,11 @@ function questionRefresh() {
 function displayRandomQuestion() {
     document.getElementById("question-p").innerHTML = questions()[Math.floor(Math.random() * questionArr.length)];
 }
+
+// stop the game.
+const stopButton = document.getElementById('stop-btn');
+stopButton.addEventListener('click', stopGame);
+
+function stopGame() {
+    console.log("stopt the game.");
+}

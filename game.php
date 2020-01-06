@@ -64,6 +64,8 @@
             </p>
             <!-- start the game button -->
             <button id="start-btn" class="btn hide btn-primary start-btn">Start</button>
+            <!-- stop the game button -->
+            <button id="stop-btn" class="btn hide btn-primary stop-btn">Stop</button>
             <!-- Language switch -->
             <input type="checkbox" data-toggle="toggle" data-on="English" data-off="Nederlands"
                 data-onstyle="success" data-offstyle="success">

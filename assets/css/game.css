@@ -12,6 +12,11 @@
     margin-left: 1em;
 }
 
+#stop-btn {
+    float: left;
+    margin-left: 1em;
+}
+
 #nickname {
     float: left;
     font-size: 150%;
