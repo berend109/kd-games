@@ -1,9 +1,8 @@
 console.log("Binair questions");
 
 // TODO: make a function that compares input to the given question.
-// TODO: make a function that stores the question so it will not be displayed again.
 // TODO: make a function that stores the amount of answers that are right or wrong.
-// TODO: make a function that that display the amount of question answered and still to come.
+// TODO: make a function that display the amount of question answered and still to come.
 
 // Create questions
 function getRandomInt(min, max) {
@@ -14,6 +13,7 @@ function getRandomInt(min, max) {
 
 let questionArr = [];
 let a;
+let b = 0;
 
 function questions() {
     for (i = 0; i < 2; i++) {
@@ -62,6 +62,7 @@ startButton.addEventListener('click', startGame);
 function startGame(){
     console.log("started");
     questionRefresh();
+    console.log(questionArr);
 }
 
 function questionRefresh() {
@@ -77,23 +78,15 @@ function questionRefresh() {
 
     let stopInterval = function() {
         clearInterval(timer);
+        b++;
         questionRefresh();
     }
 }
 
 function displayRandomQuestion() {
-    for(var start = 0; start < 20; start++) {
-        setTimeout(function () {
-            let b = 0;
-            let test = [];
-            test = questions();
-            console.log("first b", b);
-            document.getElementById("question-p").innerHTML = test[b];
-            b++;
-            console.log(test);
-            console.log("second b", b);
-        }, 10000);
-    }
+    let test = [];
+    test = questions();
+    document.getElementById("question-p").innerHTML = test[b];
 }
 
 // stop the game.
