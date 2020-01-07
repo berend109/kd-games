@@ -65,7 +65,7 @@ function startGame(){
 }
 
 function questionRefresh() {
-    displayRandomQuestion();
+    displayRandomQuestion()
     let count = 10;
     let timer = setInterval(function() {
         console.log(count);
@@ -77,12 +77,23 @@ function questionRefresh() {
 
     let stopInterval = function() {
         clearInterval(timer);
-        startGame();
+        questionRefresh();
     }
 }
 
 function displayRandomQuestion() {
-    document.getElementById("question-p").innerHTML = questions()[Math.floor(Math.random() * questionArr.length)];
+    for(var start = 0; start < 20; start++) {
+        setTimeout(function () {
+            let b = 0;
+            let test = [];
+            test = questions();
+            console.log("first b", b);
+            document.getElementById("question-p").innerHTML = test[b];
+            b++;
+            console.log(test);
+            console.log("second b", b);
+        }, 10000);
+    }
 }
 
 // stop the game.
