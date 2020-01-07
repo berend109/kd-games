@@ -91,4 +91,5 @@ stopButton.addEventListener('click', stopGame);
 
 function stopGame() {
     console.log("stopt the game.");
+    location.reload(true);
 }
