@@ -67,10 +67,11 @@ function startGame(){
 }
 
 function questionRefresh() {
-    displayRandomQuestion()
     let count = 10;
     let timer = setInterval(function() {
         console.log(count);
+        document.getElementById("counter").innerHTML = count;
+        displayRandomQuestion();
         count--;
         if(count === 0) {
             stopInterval();

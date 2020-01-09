@@ -78,13 +78,13 @@
         </div>
         <div class="card-body question-container">
             <div id="question">
-                <!-- TODO: create a question string depending on chosen language. -->
                 <p id="question-p"></p>
             </div>
         </div>
         <div class="card-body input-group" id="input-card">
             <!-- user input -->
             <input id="input-field" type="number" class="form-control">
+            <p id="counter"></p>
             <a id="buttonNext" class="btn btn-primary">Next</a>
         </div>
 

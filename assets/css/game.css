@@ -21,3 +21,9 @@
     float: left;
     font-size: 150%;
 }
+
+#counter {
+    font-size: 150%;
+    margin: auto;
+    padding-right: 5%;
+}
