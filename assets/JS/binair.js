@@ -1,10 +1,5 @@
 console.log("Binair questions");
 
-// TODO: make a function that compares input to the given question.
-// TODO: make a function that stores the amount of answers that are right or wrong.
-// TODO: make a function that displays the amount of question answered and still to come.
-// TODO: make a funciton that displays the timer.
-
 // Create questions
 function getRandomInt(min, max) {
     min = Math.ceil(min);
