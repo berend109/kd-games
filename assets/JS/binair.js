@@ -57,16 +57,18 @@ startButton.addEventListener('click', startGame);
 
 function startGame(){
     console.log("started");
+    questions();
     questionRefresh();
     console.log(questionArr);
 }
 
 function questionRefresh() {
     let count = 10;
+    displayRandomQuestion();
     let timer = setInterval(function() {
         console.log(count);
+        console.log(questionArr, "questionArr");
         document.getElementById("counter").innerHTML = count;
-        displayRandomQuestion();
         count--;
         if(count === 0) {
             stopInterval();
@@ -81,9 +83,7 @@ function questionRefresh() {
 }
 
 function displayRandomQuestion() {
-    let test = [];
-    test = questions();
-    document.getElementById("question-p").innerHTML = test[b];
+    document.getElementById("question-p").innerHTML = questionArr[b];
 }
 
 // stop the game.
