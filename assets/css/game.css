@@ -1,0 +1,29 @@
+#input {
+    width: 40%;
+    /* TODO: on small screen this needs to be disabled. */
+}
+
+#input-field {
+    margin-right: 5%;
+}
+
+#start-btn {
+    float: left;
+    margin-left: 1em;
+}
+
+#stop-btn {
+    float: left;
+    margin-left: 1em;
+}
+
+#nickname {
+    float: left;
+    font-size: 150%;
+}
+
+#counter {
+    font-size: 150%;
+    margin: auto;
+    padding-right: 5%;
+}
