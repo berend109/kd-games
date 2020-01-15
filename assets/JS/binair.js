@@ -56,10 +56,12 @@ const startButton = document.getElementById('start-btn');
 startButton.addEventListener('click', startGame);
 
 function startGame(){
-	console.log("started");
-	questions();
-	maxQuestion()
+	let startSignal = "started";
+	document.getElementById("question-p").innerHTML = startSignal;
+	setTimeout(function(){}, 1000);
 	console.log(questionArr);
+	questions();
+	maxQuestion();
 }
 
 function maxQuestion() {
@@ -71,11 +73,11 @@ function maxQuestion() {
 }
 
 function questionRefresh() {
-	let count = 2;
-	displayRandomQuestion();
+	let count = 10;
+
 	let timer = setInterval(function() {
 		console.log(count);
-		console.log(questionArr, "questionArr");
+		displayRandomQuestion();
 		document.getElementById("counter").innerHTML = count;
 		count--;
 		if(count === 0) {
