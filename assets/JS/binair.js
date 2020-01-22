@@ -113,10 +113,12 @@ let goodAnswerNmbr = 0;
 let badAnswerNmbr = 0;
 
 function getInput() {
-	let questionDisplayed = questionArr[b];
+	let expectedAnswer = (parseInt(questionArr[b], 2));
+	console.log(expectedAnswer, 'expectedAnswer');
+
 	let	inputUsr = document.getElementById('input-field').value
 
-	if (questionDisplayed == inputUsr) {
+	if (expectedAnswer == inputUsr) {
 		goodAnswerNmbr++;
 	} else {
 		badAnswerNmbr++
