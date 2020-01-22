@@ -1,4 +1,4 @@
-console.log("Binair questions");
+console.log('Binair questions');
 
 // Create questions
 function getRandomInt(min, max) {
@@ -19,7 +19,7 @@ function questions() {
 	}
 
 	for (i = 0; i < 4; i++) {
-		 a = getRandomInt(21, 50);
+		a = getRandomInt(21, 50);
 		a = a.toString(2);
 		questionArr.push(a);
 	}
@@ -56,8 +56,8 @@ const startButton = document.getElementById('start-btn');
 startButton.addEventListener('click', startGame);
 
 function startGame(){
-	let startSignal = "started";
-	document.getElementById("question-p").innerHTML = startSignal;
+	let startSignal = 'started';
+	document.getElementById('question-p').innerHTML = startSignal;
 	setTimeout(function(){}, 1000);
 	console.log(questionArr);
 	questions();
@@ -68,7 +68,7 @@ function maxQuestion() {
 	if (b < questionArr.length) {
 		questionRefresh();
 	} else {
-		console.log("end game !!");
+		console.log('end game !!');
 	}
 }
 
@@ -78,14 +78,15 @@ function questionRefresh() {
 	let timer = setInterval(function() {
 		console.log(count);
 		displayRandomQuestion();
-		document.getElementById("counter").innerHTML = count;
+		document.getElementById('counter').innerHTML = count;
 		count--;
 		if(count === 0) {
+			getInput();
 			stopInterval();
 		}
 	}, 1000);
 
-	let stopInterval = function() {
+	function stopInterval() {
 		clearInterval(timer);
 		b++;
 		maxQuestion();
@@ -93,7 +94,7 @@ function questionRefresh() {
 }
 
 function displayRandomQuestion() {
-	document.getElementById("question-p").innerHTML = questionArr[b];
+	document.getElementById('question-p').innerHTML = questionArr[b];
 }
 
 // stop the game.
@@ -101,6 +102,26 @@ const stopButton = document.getElementById('stop-btn');
 stopButton.addEventListener('click', stopGame);
 
 function stopGame() {
-	console.log("stopt the game.");
+	console.log('stopt the game.');
 	location.reload(true);
+}
+
+// compare answer tot question.
+let goodAnswerArr = [];
+let badAnswerArr = [];
+let goodAnswerNmbr = 0;
+let badAnswerNmbr = 0;
+
+function getInput() {
+	let questionDisplayed = questionArr[b];
+	let	inputUsr = document.getElementById('input-field').value
+
+	if (questionDisplayed == inputUsr) {
+		goodAnswerNmbr++;
+	} else {
+		badAnswerNmbr++
+	}
+
+	console.log('goodAnswerNmbr', goodAnswerNmbr);
+	console.log('badAnswerNmbr', badAnswerNmbr);
 }
