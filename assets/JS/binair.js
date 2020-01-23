@@ -73,7 +73,7 @@ function maxQuestion() {
 }
 
 function questionRefresh() {
-	let count = 10;
+	let count = 2;
 
 	let timer = setInterval(function() {
 		console.log(count);
@@ -126,4 +126,6 @@ function getInput() {
 
 	console.log('goodAnswerNmbr', goodAnswerNmbr);
 	console.log('badAnswerNmbr', badAnswerNmbr);
+
+	document.getElementById('input-field').value = '';
 }
