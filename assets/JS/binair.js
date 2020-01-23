@@ -75,6 +75,8 @@ function maxQuestion() {
 function questionRefresh() {
 	let count = 2;
 
+	score();
+
 	let timer = setInterval(function() {
 		console.log(count);
 		displayRandomQuestion();
@@ -128,4 +130,9 @@ function getInput() {
 	console.log('badAnswerNmbr', badAnswerNmbr);
 
 	document.getElementById('input-field').value = '';
+}
+
+// show the score.
+function score() {
+	
 }

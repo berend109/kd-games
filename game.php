@@ -66,9 +66,16 @@
             <button id="start-btn" class="btn hide btn-primary start-btn">Start</button>
             <!-- stop the game button -->
             <button id="stop-btn" class="btn hide btn-primary stop-btn">Stop</button>
+			<!-- Show total questions still to go -->
+			<div id="score">
+				<p>total questions:</p>
+				<p id="questionAnswered">0</p>
+				<p>/</p>
+				<p id="questionTotal">0</p>
+			</div>
             <!-- Language switch -->
-            <input type="checkbox" data-toggle="toggle" data-on="English" data-off="Nederlands"
-                data-onstyle="success" data-offstyle="success">
+            <!-- <input type="checkbox" data-toggle="toggle" data-on="English" data-off="Nederlands"
+                data-onstyle="success" data-offstyle="success"> -->
         </div>
         <div class="card-body" id="question-card">
             <div id="binary-image">
@@ -83,7 +90,8 @@
         </div>
         <div class="card-body input-group" id="input-card">
             <!-- user input -->
-            <input id="input-field" type="number" class="form-control">
+			<input id="input-field" type="number" class="form-control">
+			<p id="counterTime">counter:</p>
             <p id="counter"></p>
             <a id="buttonNext" class="btn btn-primary">Next</a>
         </div>
