@@ -1,7 +1,3 @@
-#header-card {
-	padding-bottom: 3.75rem;
-}
-
 #input {
     width: 40%;
     /* TODO: on small screen this needs to be disabled. */
@@ -29,7 +25,6 @@
 #counter {
     font-size: 150%;
     margin: auto;
-    padding-right: 5%;
 }
 
 #counterTime {
@@ -37,7 +32,7 @@
 	margin: auto;
 }
 
-#score {
+#score, #questions {
 	font-size: 150%;
 	float: right;
 	padding-left: 1%;

@@ -66,16 +66,18 @@ function startGame(){
 
 function maxQuestion() {
 	if (b < questionArr.length) {
+		console.log(b);
+		document.getElementById('questionToGo').innerHTML = b;
 		questionRefresh();
 	} else {
+		document.getElementById('counter').innerHTML = 0;
+		document.getElementById('questionToGo').innerHTML = 20;
 		console.log('end game !!');
 	}
 }
 
 function questionRefresh() {
 	let count = 2;
-
-	score();
 
 	let timer = setInterval(function() {
 		console.log(count);
@@ -129,10 +131,8 @@ function getInput() {
 	console.log('goodAnswerNmbr', goodAnswerNmbr);
 	console.log('badAnswerNmbr', badAnswerNmbr);
 
-	document.getElementById('input-field').value = '';
-}
+	document.getElementById('questionRight').innerHTML = goodAnswerNmbr;
+	document.getElementById('questionWrong').innerHTML = badAnswerNmbr;
 
-// show the score.
-function score() {
-	
+	document.getElementById('input-field').value = '';
 }
