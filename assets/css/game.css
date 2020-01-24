@@ -41,3 +41,7 @@
 #score, p {
 	display: inline;
 }
+
+#question-p {
+	font-size: 250%;
+}
