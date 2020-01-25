@@ -1,3 +1,9 @@
+#card {
+	display: inline-block;
+	width: 75%;
+	margin: 0% 15%;
+}
+
 #input {
     width: 40%;
     /* TODO: on small screen this needs to be disabled. */
@@ -22,20 +28,9 @@
     font-size: 150%;
 }
 
-#counter {
-    font-size: 150%;
-    margin: auto;
-}
-
-#counterTime {
+#score, #questions, #counterTime {
 	font-size: 150%;
 	margin: auto;
-}
-
-#score, #questions {
-	font-size: 150%;
-	float: right;
-	padding-left: 1%;
 }
 
 #score, p {
@@ -44,4 +39,14 @@
 
 #question-p {
 	font-size: 250%;
+}
+
+#playersGameInfo {
+	text-align: center;
+	display: ruby;
+}
+
+#playerControl {
+	text-align: center;
+	display: ruby;
 }
