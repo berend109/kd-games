@@ -104,7 +104,7 @@
         <div class="card-body input-group" id="input-card">
             <!-- user input -->
 			<input id="input-field" type="number" class="form-control">
-            <button id="buttonNext" class="btn btn-primary">Next</button>
+            <button id="next-btn" class="btn btn-primary">Next</button>
         </div>
     </div>
 
