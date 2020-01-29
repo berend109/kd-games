@@ -114,8 +114,6 @@ function stopGame() {
 }
 
 // compare answer tot question.
-let goodAnswerArr = [];
-let badAnswerArr = [];
 let goodAnswerNmbr = 0;
 let badAnswerNmbr = 0;
 
@@ -155,4 +153,10 @@ function nextBtn() {
 function timeTaken() {
 	questionTotalTimeArr.push(count);
 	console.log(questionTotalTimeArr);
+}
+
+// get the score of the questions.
+function questionsScore() {
+	questionScoreArr.push(goodAnswerNmbr, badAnswerNmbr);
+	console.log(questionScoreArr);
 }

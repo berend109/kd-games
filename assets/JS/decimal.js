@@ -10,6 +10,7 @@ function getRandomInt(min, max) {
 // global variables
 let questionArr = [];
 let questionTotalTimeArr = [];
+let questionScoreArr = [];
 let a;
 let b = 0;
 let count = 30;
@@ -76,6 +77,7 @@ function maxQuestion() {
 	} else {
 		document.getElementById('counter').innerHTML = 0;
 		document.getElementById('questionToGo').innerHTML = 20;
+		questionsScore();
 		console.log('end game !!');
 	}
 }
@@ -114,8 +116,6 @@ function stopGame() {
 }
 
 // compare answer tot question.
-let goodAnswerArr = [];
-let badAnswerArr = [];
 let goodAnswerNmbr = 0;
 let badAnswerNmbr = 0;
 
@@ -155,4 +155,10 @@ function nextBtn() {
 function timeTaken() {
 	questionTotalTimeArr.push(count);
 	console.log(questionTotalTimeArr);
+}
+
+// get the score of the questions.
+function questionsScore() {
+	questionScoreArr.push(goodAnswerNmbr, badAnswerNmbr);
+	console.log(questionScoreArr);
 }
