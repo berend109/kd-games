@@ -56,19 +56,38 @@
 <body>
 
     <div class="card text-center" id="card">
-
         <div class="card-header text-right" id="header-card">
-            <!-- show nickname -->
-            <p id="nickname">
-                <?php echo $playerName; ?>
-            </p>
-            <!-- start the game button -->
-            <button id="start-btn" class="btn hide btn-primary start-btn">Start</button>
-            <!-- stop the game button -->
-            <button id="stop-btn" class="btn hide btn-primary stop-btn">Stop</button>
-            <!-- Language switch -->
-            <input type="checkbox" data-toggle="toggle" data-on="English" data-off="Nederlands"
-                data-onstyle="success" data-offstyle="success">
+			<!-- show nickname -->
+			<div id="playerControl">
+				<p id="nickname">
+					<?php echo $playerName; ?>
+				</p>
+				<!-- start the game button -->
+				<button id="start-btn" class="btn hide btn-primary start-btn">Start</button>
+				<!-- stop the game button -->
+				<button id="stop-btn" class="btn hide btn-primary stop-btn">Stop</button>
+			</div>
+			<!-- Show total questions -->
+			<div id="playersGameInfo">
+				<div id="questions">
+					<p>questions:</p>
+					<p id="questionToGo">0</p>
+					<p>/</p>
+					<p id="questionTotal">20</p>
+				</div>
+				<!-- show the counter to the player -->
+				<div id="counterTime">
+					<p>counter:</p>
+					<p id="counter">0</p>
+				</div>
+				<!-- Show score -->
+				<div id="score">
+					<p>score:</p>
+					<p id="questionRight">0</p>
+					<p>/</p>
+					<p id="questionWrong">0</p>
+				</div>
+			</div>
         </div>
         <div class="card-body" id="question-card">
             <div id="binary-image">
@@ -77,17 +96,16 @@
             </div>
         </div>
         <div class="card-body question-container">
+			<!-- show the question -->
             <div id="question">
                 <p id="question-p"></p>
             </div>
         </div>
         <div class="card-body input-group" id="input-card">
             <!-- user input -->
-            <input id="input-field" type="number" class="form-control">
-            <p id="counter"></p>
-            <a id="buttonNext" class="btn btn-primary">Next</a>
+			<input id="input-field" type="number" class="form-control">
+            <button id="next-btn" class="btn btn-primary">Next</button>
         </div>
-
     </div>
 
     <script type="text/javascript">

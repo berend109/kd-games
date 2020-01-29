@@ -31,7 +31,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `leaderboard` (
   `nickname` int(11) NOT NULL,
   `time` int(11) NOT NULL,
-  `fault` int(11) NOT NULL
+  `score` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 COMMIT;
 
