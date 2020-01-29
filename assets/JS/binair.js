@@ -147,6 +147,7 @@ nextButton.addEventListener('click', nextBtn);
 function nextBtn() {
 	console.log('next button pressed !!');
 	timeTaken();
+	getInput();
 	count = 0;
 	stopInterval();
 }

@@ -7,9 +7,13 @@ function getRandomInt(min, max) {
 	return Math.floor(Math.random() * (max - min)) + min;
 }
 
+// global variables
 let questionArr = [];
+let questionTotalTimeArr = [];
 let a;
 let b = 0;
+let count = 30;
+let timer;
 
 function questions() {
 	for (i = 0; i < 2; i++) {
@@ -77,9 +81,7 @@ function maxQuestion() {
 }
 
 function questionRefresh() {
-	let count = 2;
-
-	let timer = setInterval(function() {
+	timer = setInterval(function() {
 		console.log(count);
 		displayRandomQuestion();
 		document.getElementById('counter').innerHTML = count;
@@ -89,12 +91,13 @@ function questionRefresh() {
 			stopInterval();
 		}
 	}, 1000);
+}
 
-	function stopInterval() {
-		clearInterval(timer);
-		b++;
-		maxQuestion();
-	}
+function stopInterval() {
+	clearInterval(timer);
+	b++;
+	count = 30;
+	maxQuestion();
 }
 
 function displayRandomQuestion() {
@@ -128,8 +131,28 @@ function getInput() {
 		badAnswerNmbr++
 	}
 
+	console.log('goodAnswerNmbr', goodAnswerNmbr);
+	console.log('badAnswerNmbr', badAnswerNmbr);
+
 	document.getElementById('questionRight').innerHTML = goodAnswerNmbr;
 	document.getElementById('questionWrong').innerHTML = badAnswerNmbr;
 
 	document.getElementById('input-field').value = '';
+}
+
+// go to the next question and store time taken to answer question.
+const nextButton = document.getElementById('next-btn');
+nextButton.addEventListener('click', nextBtn);
+
+function nextBtn() {
+	console.log('next button pressed !!');
+	timeTaken();
+	getInput();
+	count = 0;
+	stopInterval();
+}
+
+function timeTaken() {
+	questionTotalTimeArr.push(count);
+	console.log(questionTotalTimeArr);
 }
