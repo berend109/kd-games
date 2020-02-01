@@ -114,7 +114,6 @@
         var importedLanguageMode = document.createElement('script');
         var gameMode = "<?= $status; ?>";
         var languageMode = "<?= $language; ?>";
-        var playerName = "<?= $playerName; ?>";
 
         if (gameMode === "Binair") {
             importedGameMode.src = 'assets/JS/binair.js';
@@ -123,9 +122,9 @@
         }
 
         if (languageMode === "Nederlands") {
-            importedLanguageMode.src = 'assets/JS/Nederlands.js';
+            importedLanguageMode.src = 'assets/JS/nederlands.js';
         } else {
-            importedLanguageMode.src = 'assets/JS/English.js';
+            importedLanguageMode.src = 'assets/JS/english.js';
         }
 
         document.body.appendChild(importedGameMode);
