@@ -1,1 +1,1 @@
-// alert("Nederlands");
+console.log("Nederlands");
