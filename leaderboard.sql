@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 03 feb 2020 om 02:14
+-- Gegenereerd op: 03 feb 2020 om 21:52
 -- Serverversie: 10.3.15-MariaDB
 -- PHP-versie: 7.3.6
 
@@ -35,6 +35,16 @@ CREATE TABLE `leaderboard` (
   `date` timestamp NOT NULL DEFAULT current_timestamp(),
   `game` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `leaderboard`
+--
+
+INSERT INTO `leaderboard` (`nickname`, `time`, `score`, `date`, `game`) VALUES
+('Chris', 587, 1, '2020-02-03 11:46:24', 'binair'),
+('sean', 599, 0, '2020-02-03 11:48:12', 'binair'),
+('Sean', 587, 1, '2020-02-03 20:47:20', 'binair');
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
