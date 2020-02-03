@@ -23,9 +23,3 @@ class connection {
         }
     }
 }
-
-// test connection
-// echo "<br/>";
-// echo "<br/>";
-// $object = new connection; // class
-// $object->connect(); // function
