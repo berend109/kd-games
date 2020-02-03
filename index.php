@@ -39,7 +39,7 @@
 
     <div class="card text-center" id="card">
         <div class="card-header">
-			<form action="leaderboard.php">
+			<form action="assets/php/leaderboard.php">
 				<input type="submit" value="leader board" class="btn btn-primary">
 			</form>
 			<form action="assets/php/game.php" method="GET">
