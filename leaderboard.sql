@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 03 feb 2020 om 01:26
+-- Gegenereerd op: 03 feb 2020 om 02:14
 -- Serverversie: 10.3.15-MariaDB
 -- PHP-versie: 7.3.6
 
@@ -29,12 +29,12 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `leaderboard` (
-  `nickname` int(11) NOT NULL,
+  `nickname` text NOT NULL,
   `time` int(11) NOT NULL,
   `score` int(11) NOT NULL,
-  `date` tinyint(4) NOT NULL
+  `date` timestamp NOT NULL DEFAULT current_timestamp(),
+  `game` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
