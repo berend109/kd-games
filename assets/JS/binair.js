@@ -173,5 +173,5 @@ function sendFinalScore() {
 
 	let finalScore = sum + ' ' + questionScoreArr + ' ' + nickname + ' ' + gameMode;
 
-	window.location.href = 'assets/php/send.php?score=' + finalScore;
+	window.location.href = '../php/send.php?score=' + finalScore;
 }

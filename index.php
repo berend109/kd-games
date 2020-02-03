@@ -39,7 +39,10 @@
 
     <div class="card text-center" id="card">
         <div class="card-header">
-            <form action="game.php" method="GET">
+			<form action="leaderboard.php">
+				<input type="submit" value="leader board" class="btn btn-primary">
+			</form>
+			<form action="assets/php/game.php" method="GET">
                 <div id="inputForm langSelect">
                     <p>Select Language</p>
                     <!-- language switch -->

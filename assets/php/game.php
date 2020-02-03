@@ -43,8 +43,8 @@
     <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.5.0/js/bootstrap4-toggle.min.js"></script>
 
     <!-- css link -->
-    <link rel="stylesheet" type="text/css" href="./assets/css/index.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/game.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/game.css">
 
     <!-- title -->
     <title>Project Binair Rekenen</title>
@@ -89,7 +89,7 @@
         <div class="card-body" id="question-card">
             <div id="binary-image">
                 <p id="explaining paragraph"></p>
-                <img src="assets/image/binary-code-binary-system-explained.png" class="img-fluid" alt="explaining of binary counting">
+                <img src="../image/binary-code-binary-system-explained.png" class="img-fluid" alt="explaining of binary counting">
             </div>
         </div>
         <div class="card-body question-container">
@@ -113,15 +113,15 @@
         var languageMode = "<?= $language; ?>";
 
         if (gameMode === "Binair") {
-            importedGameMode.src = 'assets/JS/binair.js';
+            importedGameMode.src = '../JS/binair.js';
         } else {
-            importedGameMode.src = 'assets/JS/decimal.js';
+            importedGameMode.src = '../JS/decimal.js';
         }
 
         if (languageMode === "Nederlands") {
-            importedLanguageMode.src = 'assets/JS/nederlands.js';
+            importedLanguageMode.src = '../JS/nederlands.js';
         } else {
-            importedLanguageMode.src = 'assets/JS/english.js';
+            importedLanguageMode.src = '../JS/english.js';
         }
 
         document.body.appendChild(importedGameMode);
