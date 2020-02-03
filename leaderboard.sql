@@ -36,16 +36,6 @@ CREATE TABLE `leaderboard` (
   `game` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Gegevens worden geëxporteerd voor tabel `leaderboard`
---
-
-INSERT INTO `leaderboard` (`nickname`, `time`, `score`, `date`, `game`) VALUES
-('Chris', 587, 1, '2020-02-03 11:46:24', 'binair'),
-('sean', 599, 0, '2020-02-03 11:48:12', 'binair'),
-('Sean', 587, 1, '2020-02-03 20:47:20', 'binair');
-COMMIT;
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
