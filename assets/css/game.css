@@ -51,3 +51,7 @@
 	text-align: center;
 	display: ruby;
 }
+
+#stop-btn {
+	visibility: hidden;
+}

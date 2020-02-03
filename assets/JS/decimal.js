@@ -61,6 +61,8 @@ const startButton = document.getElementById('start-btn');
 startButton.addEventListener('click', startGame);
 
 function startGame(){
+	document.getElementById('start-btn').style.visibility = 'hidden';
+	document.getElementById('stop-btn').style.visibility = 'visible';
 	let startSignal = 'started';
 	document.getElementById('question-p').innerHTML = startSignal;
 	setTimeout(function(){}, 1000);

@@ -46,9 +46,9 @@
 					<?php echo $playerName; ?>
 				</p>
 				<!-- start the game button -->
-				<button id="start-btn" class="btn hide btn-primary start-btn">Start</button>
+				<button id="start-btn" class="btn btn-primary">Start</button>
 				<!-- stop the game button -->
-				<button id="stop-btn" class="btn hide btn-primary stop-btn">Stop</button>
+				<button id="stop-btn" class="btn btn-primary">Stop</button>
 			</div>
 			<!-- Show total questions -->
 			<div id="playersGameInfo">
