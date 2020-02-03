@@ -35,7 +35,7 @@ class sendData {
 			$sql = "INSERT INTO `leaderboard`(`nickname`, `time`, `score`, `game`) VALUES ('$playerName', '$time', '$score', '$gameMode')";
 			$stmt = $con->prepare($sql);
 			$stmt->execute();
-			// header("Refresh:5; url=../../index.php");
+			header("Refresh:0; url=../../index.php");
         } catch (PDOException $e) {
             echo "Something went wrong: " . $e->getMessage();
         }
