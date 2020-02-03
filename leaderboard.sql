@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Oct 23, 2019 at 06:22 PM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.10
+-- Host: 127.0.0.1
+-- Gegenereerd op: 03 feb 2020 om 01:26
+-- Serverversie: 10.3.15-MariaDB
+-- PHP-versie: 7.3.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,19 +19,20 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `kdBasisGames`
+-- Database: `kdbasisgames`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `leaderboard`
+-- Tabelstructuur voor tabel `leaderboard`
 --
 
 CREATE TABLE `leaderboard` (
   `nickname` int(11) NOT NULL,
   `time` int(11) NOT NULL,
-  `score` int(11) NOT NULL
+  `score` int(11) NOT NULL,
+  `date` tinyint(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 COMMIT;
 
