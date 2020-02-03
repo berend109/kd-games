@@ -59,7 +59,6 @@
                     <!-- empty paragraph for some padding-->
                     <p></p>
                     <input type="submit" value="submit" class="btn btn-primary">
-
                 </div>
             </form>
         </div>

@@ -161,11 +161,17 @@ function timeTaken() {
 // get the score of the questions.
 function questionsScore() {
 	questionScoreArr.push(goodAnswerNmbr, badAnswerNmbr);
-	console.log(questionScoreArr, 'final score');
 	sendFinalScore();
 }
 
 // send the data to the db
 function sendFinalScore() {
-	console.log('Data send !!');
+	let sumTotalTime = questionTotalTimeArr;
+	let sum = sumTotalTime.reduce(function(a, b) { return a + b; }, 0);
+	let nickname = document.getElementById('nickname').innerHTML;
+	let gameMode = 'binair';
+
+	let finalScore = sum + ' ' + questionScoreArr + ' ' + nickname + ' ' + gameMode;
+
+	window.location.href = 'assets/php/send.php?score=' + finalScore;
 }

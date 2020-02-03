@@ -1,6 +1,3 @@
-<!-- Notes -->
-<!-- To hide html with bootstrap use class="d-none". -->
-
 <?php
 
     session_start();
