@@ -78,8 +78,8 @@ function maxQuestion() {
 		document.getElementById('counter').innerHTML = 0;
 		document.getElementById('questionToGo').innerHTML = 20;
 		document.getElementById('next-btn').style.visibility = 'hidden';
+		alert('finished');
 		questionsScore();
-		console.log('end game !!');
 	}
 }
 
