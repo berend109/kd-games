@@ -1,9 +1,3 @@
-<?php
-
-	require 'get.php';
-
-?>
-
 <html>
 <head>
 
@@ -24,25 +18,64 @@
 
 <body>
 
-<div class="card text-center" id="card">
-	<table class="table">
-		<thead class="thead-dark">
-			<tr>
-				<th scope="col">naam</th>
-				<th scope="col">score</th>
-				<th scope="col">tijd</th>
-				<th scope="col">datum</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>test</td>
-				<td>test</td>
-				<td>test</td>
-				<td>test</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+<?php
+
+session_start();
+
+require 'conn.php';
+
+$stmtArray = [];
+$pdo = new connection; // class
+$con = $pdo->connect(); // function
+
+class getData {
+
+	public function __construct() {}
+    
+	public function register($con, $stmtArray) {
+
+		try {
+			$sql = "SELECT * FROM `leaderboard`";
+			$stmtArray = $con->query($sql);
+			if($stmtArray->rowCount() > 0){
+				echo '<div class="card text-center" id="card">';
+					echo '<table class="table"';
+						echo '<tr>';
+							echo '<th>nickname</th>';
+							echo '<th>time</th>';
+							echo '<th>score</th>';
+							echo '<th>data</th>';
+							echo '<th>game</th>';
+						echo "</tr>";
+					while($row = $stmtArray->fetch()){
+						echo '<tbody>';
+							echo '<tr>';
+								echo '<td>' . $row['nickname'] . '</td>';
+								echo '<td>' . $row['time'] . '</td>';
+								echo '<td>' . $row['score'] . '</td>';
+								echo '<td>' . $row['date'] . '</td>';
+								echo '<td>' . $row['game'] . '</td>';
+							echo '</tr>';
+						echo '</tbody>';
+					}
+					echo "</table>";
+				echo '</div>';
+				// Free result set
+				unset($stmtArray);
+			} else{
+				echo "No records matching your query were found.";
+			}
+		} catch (PDOException $e) {
+			echo 'Something went wrong: ' . $e->getMessage();
+		}
+
+	}
+
+}
+
+$reg = new getData(); // class
+$reg->register($con, $stmtArray); // function
+
+?>
 
 </body>
