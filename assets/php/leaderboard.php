@@ -10,6 +10,7 @@
 
     <!-- css link -->
     <link rel="stylesheet" type="text/css" href="../css/index.css">
+	<link rel="stylesheet" type="text/css" href="../css/leaderboard.css">
 
     <!-- title -->
     <title>Project Binair Rekenen</title>
@@ -35,16 +36,16 @@ class getData {
 	public function register($con, $stmtArray) {
 
 		try {
-			$sql = "SELECT * FROM `leaderboard`";
+			$sql = "SELECT * FROM `leaderboard` ORDER BY score DESC, time DESC";
 			$stmtArray = $con->query($sql);
 			if($stmtArray->rowCount() > 0){
 				echo '<div class="card text-center" id="card">';
 					echo '<table class="table"';
-						echo '<tr>';
+						echo '<tr id="tr-head">';
 							echo '<th>nickname</th>';
 							echo '<th>time</th>';
 							echo '<th>score</th>';
-							echo '<th>data</th>';
+							echo '<th>date</th>';
 							echo '<th>game</th>';
 						echo "</tr>";
 					while($row = $stmtArray->fetch()){
