@@ -36,7 +36,7 @@ class getData {
 	public function register($con, $stmtArray) {
 
 		try {
-			$sql = "SELECT * FROM `leaderboard` ORDER BY score DESC, time DESC";
+			$sql = "SELECT * FROM `leaderboard` ORDER BY score DESC, time";
 			$stmtArray = $con->query($sql);
 			if($stmtArray->rowCount() > 0){
 				echo '<div class="card text-center" id="card">';
@@ -64,7 +64,7 @@ class getData {
 				// Free result set
 				unset($stmtArray);
 			} else{
-				echo "No records matching your query were found.";
+				echo "No records found in the DB. Geen data gevonden in DB.";
 			}
 		} catch (PDOException $e) {
 			echo 'Something went wrong: ' . $e->getMessage();

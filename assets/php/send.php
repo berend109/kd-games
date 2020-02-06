@@ -12,6 +12,7 @@ $result = $_GET['score'];
 $pieces = explode(' ', $result);
 
 $time = $pieces[0];
+$finalTime = (600 - $time); // this way the user sees total time taken to play the game.
 $score = $pieces[1];
 $playerName = $pieces[2];
 $gameMode = $pieces[3];
@@ -20,10 +21,10 @@ class sendData {
 
     public function __construct() {}
     
-    public function register($con, $time, $score, $playerName, $gameMode) {
+    public function register($con, $finalTime, $score, $playerName, $gameMode) {
 
         try {
-			$sql = "INSERT INTO `leaderboard`(`nickname`, `time`, `score`, `game`) VALUES ('$playerName', '$time', '$score', '$gameMode')";
+			$sql = "INSERT INTO `leaderboard`(`nickname`, `time`, `score`, `game`) VALUES ('$playerName', '$finalTime', '$score', '$gameMode')";
 			$stmt = $con->prepare($sql);
 			$stmt->execute();
 			header('Refresh:0; url=../../index.php');
@@ -36,6 +37,6 @@ class sendData {
 }
 
 $reg = new sendData(); // class
-$reg->register($con, $time, $score, $playerName, $gameMode); // function
+$reg->register($con, $finalTime, $score, $playerName, $gameMode); // function
 
 ?>
