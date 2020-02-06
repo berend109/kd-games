@@ -2,12 +2,11 @@
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 70%;
+	width: 75rem;
 }
 
 #input {
     width: 40%;
-    /* TODO: on small screen this needs to be disabled. */
 }
 
 #input-field {
@@ -38,7 +37,7 @@
 	display: inline;
 }
 
-#question-p {
+#question-p, #startStopSignal {
 	font-size: 250%;
 }
 
@@ -54,4 +53,13 @@
 
 #stop-btn {
 	visibility: hidden;
+}
+
+#questionParagraph {
+	font-size: 200%;
+	visibility: hidden;
+}
+
+#counter, #questionTotal {
+	padding-right: 10px;
 }

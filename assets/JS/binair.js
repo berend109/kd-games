@@ -64,7 +64,7 @@ function startGame(){
 	document.getElementById('start-btn').style.visibility = 'hidden';
 	document.getElementById('stop-btn').style.visibility = 'visible';
 	let startSignal = 'started';
-	document.getElementById('question-p').innerHTML = startSignal;
+	document.getElementById('startStopSignal').innerHTML = startSignal;
 	setTimeout(function(){}, 1000);
 	console.log(questionArr);
 	questions();
@@ -88,6 +88,7 @@ function maxQuestion() {
 function questionRefresh() {
 	timer = setInterval(function() {
 		console.log(count);
+		document.getElementById('questionParagraph').style.visibility = 'visible';
 		displayRandomQuestion();
 		document.getElementById('counter').innerHTML = count;
 		count--;
@@ -115,6 +116,7 @@ stopButton.addEventListener('click', stopGame);
 
 function stopGame() {
 	console.log('stopt the game.');
+	document.getElementById('startStopSignal').innerHTML = 'reset';
 	location.reload(true);
 }
 

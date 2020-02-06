@@ -53,19 +53,19 @@
 			<!-- Show total questions -->
 			<div id="playersGameInfo">
 				<div id="questions">
-					<p>questions:</p>
+					<p id="questionGame">questions:</p>
 					<p id="questionToGo">0</p>
 					<p>/</p>
 					<p id="questionTotal">20</p>
 				</div>
 				<!-- show the counter to the player -->
 				<div id="counterTime">
-					<p>counter:</p>
+					<p id="counterGame">counter:</p>
 					<p id="counter">0</p>
 				</div>
 				<!-- Show score -->
 				<div id="score">
-					<p>score:</p>
+					<p id="scoreGame">score:</p>
 					<p id="questionRight">0</p>
 					<p>/</p>
 					<p id="questionWrong">0</p>
@@ -80,7 +80,11 @@
         </div>
         <div class="card-body question-container">
 			<!-- show the question -->
+			<div>
+				<p id="startStopSignal"></p>
+			</div>
             <div id="question">
+				<p id="questionParagraph"></p>
                 <p id="question-p"></p>
             </div>
         </div>
