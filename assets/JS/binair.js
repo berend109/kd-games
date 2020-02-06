@@ -10,6 +10,7 @@ function getRandomInt(min, max) {
 // global variables
 let questionArr = [];
 let questionTotalTimeArr = [];
+let questionScoreArr = [];
 let a;
 let b = 0;
 let count = 30;
@@ -60,8 +61,10 @@ const startButton = document.getElementById('start-btn');
 startButton.addEventListener('click', startGame);
 
 function startGame(){
+	document.getElementById('start-btn').style.visibility = 'hidden';
+	document.getElementById('stop-btn').style.visibility = 'visible';
 	let startSignal = 'started';
-	document.getElementById('question-p').innerHTML = startSignal;
+	document.getElementById('startStopSignal').innerHTML = startSignal;
 	setTimeout(function(){}, 1000);
 	console.log(questionArr);
 	questions();
@@ -76,13 +79,16 @@ function maxQuestion() {
 	} else {
 		document.getElementById('counter').innerHTML = 0;
 		document.getElementById('questionToGo').innerHTML = 20;
-		console.log('end game !!');
+		document.getElementById('next-btn').style.visibility = 'hidden';
+		alert('finished');
+		questionsScore();
 	}
 }
 
 function questionRefresh() {
 	timer = setInterval(function() {
 		console.log(count);
+		document.getElementById('questionParagraph').style.visibility = 'visible';
 		displayRandomQuestion();
 		document.getElementById('counter').innerHTML = count;
 		count--;
@@ -110,6 +116,7 @@ stopButton.addEventListener('click', stopGame);
 
 function stopGame() {
 	console.log('stopt the game.');
+	document.getElementById('startStopSignal').innerHTML = 'reset';
 	location.reload(true);
 }
 
@@ -158,5 +165,17 @@ function timeTaken() {
 // get the score of the questions.
 function questionsScore() {
 	questionScoreArr.push(goodAnswerNmbr, badAnswerNmbr);
-	console.log(questionScoreArr);
+	sendFinalScore();
+}
+
+// send the data to the db
+function sendFinalScore() {
+	let sumTotalTime = questionTotalTimeArr;
+	let sum = sumTotalTime.reduce(function(a, b) { return a + b; }, 0);
+	let nickname = document.getElementById('nickname').innerHTML;
+	let gameMode = 'binair';
+
+	let finalScore = sum + ' ' + questionScoreArr + ' ' + nickname + ' ' + gameMode;
+
+	window.location.href = '../php/send.php?score=' + finalScore;
 }

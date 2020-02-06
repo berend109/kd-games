@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 23, 2019 at 06:22 PM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.10
+-- Generation Time: Feb 03, 2020 at 10:29 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -29,9 +29,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `leaderboard` (
-  `nickname` int(11) NOT NULL,
+  `nickname` text NOT NULL,
   `time` int(11) NOT NULL,
-  `score` int(11) NOT NULL
+  `score` text NOT NULL,
+  `date` timestamp NOT NULL DEFAULT current_timestamp(),
+  `game` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 COMMIT;
 
