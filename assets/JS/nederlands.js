@@ -14,3 +14,6 @@ document.getElementById('questionParagraph').innerHTML = 'vraag: ';
 
 // next button.
 document.getElementById('next-btn').innerHTML = 'volgende vraag';
+
+// home button.
+document.getElementById('home-btn').innerHTML = 'terug';
