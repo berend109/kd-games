@@ -162,6 +162,19 @@ function timeTaken() {
 	console.log(questionTotalTimeArr);
 }
 
+// go to the next question when pressing enter key.
+let inputKeyPress = document.getElementById('input-field');
+inputKeyPress.addEventListener('keyup', function(event) {
+	if(event.keyCode === 13) {
+		console.log('enter key pressed.')
+		event.preventDefault();
+		timeTaken();
+		getInput();
+		count = 0;
+		stopInterval();
+	}
+})
+
 // get the score of the questions.
 function questionsScore() {
 	questionScoreArr.push(goodAnswerNmbr, badAnswerNmbr);
