@@ -45,6 +45,8 @@
 				<p id="nickname">
 					<?php echo $playerName; ?>
 				</p>
+				<!-- back to home screen button -->
+				<button id="home-btn" class="btn btn-primary" onclick="window.location='../../index.php';">home</button>
 				<!-- start the game button -->
 				<button id="start-btn" class="btn btn-primary">Start</button>
 				<!-- stop the game button -->

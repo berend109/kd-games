@@ -5,20 +5,11 @@
 	width: 75rem;
 }
 
-#input {
-    width: 40%;
-}
-
 #input-field {
     margin-right: 5%;
 }
 
-#start-btn {
-    float: left;
-    margin-left: 1em;
-}
-
-#stop-btn {
+#home-btn, #start-btn, #stop-btn {
     float: left;
     margin-left: 1em;
 }
