@@ -1,12 +1,5 @@
 console.log('Binair questions');
 
-// Create questions
-function getRandomInt(min, max) {
-	min = Math.ceil(min);
-	max = Math.floor(max);
-	return Math.floor(Math.random() * (max - min)) + min;
-}
-
 // global variables
 let questionArr = [];
 let questionTotalTimeArr = [];
@@ -15,6 +8,13 @@ let a;
 let b = 0;
 let count = 30;
 let timer;
+
+// Create questions
+function getRandomInt(min, max) {
+	min = Math.ceil(min);
+	max = Math.floor(max);
+	return Math.floor(Math.random() * (max - min)) + min;
+}
 
 function questions() {
 	for (i = 0; i < 2; i++) {
@@ -161,6 +161,19 @@ function timeTaken() {
 	questionTotalTimeArr.push(count);
 	console.log(questionTotalTimeArr);
 }
+
+// go to the next question when pressing enter key.
+let inputKeyPress = document.getElementById('input-field');
+inputKeyPress.addEventListener('keyup', function(event) {
+	if(event.keyCode === 13) {
+		console.log('enter key pressed.')
+		event.preventDefault();
+		timeTaken();
+		getInput();
+		count = 0;
+		stopInterval();
+	}
+})
 
 // get the score of the questions.
 function questionsScore() {
