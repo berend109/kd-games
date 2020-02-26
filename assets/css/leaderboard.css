@@ -13,3 +13,12 @@ td, th {
 th {
 	width: 5em;
 }
+
+#homeButton {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 10rem;
+	margin-bottom: 2%;
+	margin-top: 2%;
+}
