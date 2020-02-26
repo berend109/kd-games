@@ -19,6 +19,8 @@
 
 <body>
 
+<a class="btn btn-primary" href="../../index.php" role="button" id="homeButton">BACK / TERUG</a>
+
 <?php
 
 session_start();

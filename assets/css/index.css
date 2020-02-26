@@ -8,9 +8,16 @@ input[type=number] {
     display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 70%;
+	max-width: 80rem;
+    min-width: 27rem;
+    margin-top: 2%;
 }
 
 input {
     text-align: center;
+}
+
+.form-control {
+    width: 40%;
+    margin: auto;
 }
